@@ -135,7 +135,7 @@
   ;; Interactive client REPL with nREPL server for Clojure Editor support
   :repl/basic
   {:extra-deps {nrepl/nrepl {:mvn/version "1.0.0"}
-                cider/cider-nrepl {:mvn/version "0.30.0"}}
+                cider/cider-nrepl {:mvn/version "0.45.0"}}
    :main-opts  ["-m" "nrepl.cmdline"
                 "--middleware" "[cider.nrepl/cider-middleware]"
                 "--interactive"]}
@@ -143,13 +143,13 @@
   ;; Headless REPL with nREPL server for Clojure Editor support
   :repl/headless
   {:extra-deps {nrepl/nrepl {:mvn/version "1.0.0"}
-                cider/cider-nrepl {:mvn/version "0.30.0"}}
+                cider/cider-nrepl {:mvn/version "0.45.0"}}
    :main-opts  ["-m" "nrepl.cmdline"
                 "--middleware" "[cider.nrepl/cider-middleware]"]}
 
   :repl/refactor
   {:extra-deps {nrepl/nrepl                   {:mvn/version "1.0.0"}
-                cider/cider-nrepl             {:mvn/version "0.30.0"}
+                cider/cider-nrepl             {:mvn/version "0.45.0"}
                 refactor-nrepl/refactor-nrepl {:mvn/version "3.6.0"}}
    :main-opts  ["-m" "nrepl.cmdline"
                 "--middleware" "[refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"
@@ -159,7 +159,7 @@
   :repl/cljs
   {:extra-deps {org.clojure/clojurescript       {:mvn/version "1.10.773"}
                 nrepl/nrepl                     {:mvn/version "1.0.0"}
-                cider/cider-nrepl               {:mvn/version "0.30.0"}
+                cider/cider-nrepl               {:mvn/version "0.45.0"}
                 cider/piggieback                {:mvn/version "0.5.3"}}
    :main-opts  ["-m" "nrepl.cmdline"
                 "--interactive"
@@ -169,7 +169,7 @@
   {:extra-deps {org.clojure/clojurescript       {:mvn/version "1.10.773"}
                 com.bhauman/figwheel-main       {:mvn/version "0.2.18"}
                 nrepl/nrepl                     {:mvn/version "1.0.0"}
-                cider/cider-nrepl               {:mvn/version "0.30.0"}
+                cider/cider-nrepl               {:mvn/version "0.45.0"}
                 cider/piggieback                {:mvn/version "0.5.3"}}
    :main-opts  ["-m" "nrepl.cmdline"
                 "--interactive"
@@ -187,7 +187,7 @@
   ;; clojure -M:repl/rebel
   :repl/rebel
   {:extra-deps {nrepl/nrepl                {:mvn/version "1.0.0"}
-                cider/cider-nrepl          {:mvn/version "0.30.0"}
+                cider/cider-nrepl          {:mvn/version "0.45.0"}
                 com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
    :main-opts  ["-m" "nrepl.cmdline"
                 "--middleware" "[cider.nrepl/cider-middleware]"
@@ -196,7 +196,7 @@
 
   :repl/reloaded
   {:extra-deps {nrepl/nrepl                {:mvn/version "1.0.0"}
-                cider/cider-nrepl          {:mvn/version "0.30.0"}
+                cider/cider-nrepl          {:mvn/version "0.45.0"}
                 com.bhauman/rebel-readline {:mvn/version "0.1.4"}
                 djblue/portal {:mvn/version "0.35.1"}
                 org.clojure/tools.namespace {:mvn/version "1.4.1"}
@@ -238,7 +238,7 @@
   ;; clojure -M:repl/rebel-remote --host hostname --port 12345
   :repl/rebel-remote
   {:extra-deps {nrepl/nrepl                {:mvn/version "1.0.0"}
-                cider/cider-nrepl          {:mvn/version "0.30.0"}
+                cider/cider-nrepl          {:mvn/version "0.45.0"}
                 com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
    :main-opts  ["-m" "nrepl.cmdline"
                 "--connect"

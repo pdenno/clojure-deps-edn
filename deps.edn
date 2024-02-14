@@ -5,7 +5,6 @@
 ;; using Community projects as tools and libraries
 ;; to enhanced the development workflow
 ;; --------------------------------------------------
-;;
 
 ;; --------------------------------------------------
 ;; Top-level keys for Clojure CLI deps.edn

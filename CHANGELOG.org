@@ -2,8 +2,158 @@
 
 * Unreleased
 
+* 2026-02-05
+** Added
+   - dev: ci workflow to create pr's for new library and action versions
+   - dev: update github actions to latest versions
+
+** Updated
+   - alias: update library name and version for cljfmt tool
+   - aliases: update library versions using `make dependencies-update`
+
+   | :name                                   | :current                                 | :latest                                  |
+   |-----------------------------------      |------------------------------------------|------------------------------------------|
+   | clojurians-zulip/feeds                  | 39c07aefe1903685d9d43492cda4ad2eb34cf51c | a7d1642b38732f79944862e14ff4786b9df9a25d |
+   | com.brunobonacci/mulog                  | 0.9.0                                    | 0.10.0                                   |
+   | com.github.flow-storm/clojure           | 1.12.3-1                                 | 1.12.4                                   |
+   | com.github.flow-storm/flow-storm-dbg    | 4.5.8                                    | 4.5.9                                    |
+   | com.github.seancorfield/next.jdbc       | 1.3.1070                                 | 1.3.1093                                 |
+   | dev.weavejester/cljfmt                  | 0.15.2                                   | 0.15.5                                   |
+   | djblue/portal                           | 0.61.0                                   | 0.62.2                                   |
+   | io.github.nextjournal/clerk             | 0.18.1150                                | 0.18.1158                                |
+   | io.github.practicalli/project-templates | 2025-09-04                               | 2026-02-05                               |
+   | io.github.seancorfield/deps-new         | v0.10.1                                  | v0.10.3                                  |
+   | nrepl/nrepl                             | 1.5.0                                    | 1.5.2                                    |
+   | org.clojure/spec-alpha2                 | eb94e46853d90153ba6dc72a4093719f38a90a4a | efbeb200b9594e265907c1d66ad4ffd9cd8c91cf |
+   | org.clojure/test.check                  | 1.1.2                                    | 1.1.3                                    |
+   | org.clojure/tools.deps.graph            | 1.1.90                                   | 1.2.98                                   |
+   | org.clojure/tools.namespace             | 1.5.0                                    | 1.5.1                                    |
+   | org.clojure/tools.trace                 | 0.8.0                                    | 0.9.0                                    |
+
+   - dev: updated GitHub action versions in all workflows
+
+   | :file                                          | :name                                | :current   | :latest    |
+   |------------------------------------------------|--------------------------------------|------------|------------|
+   | .github/workflows/changelog-check.yaml         | actions/checkout                     | v5         | v6         |
+   | .github/workflows/lint-review.yaml             | actions/checkout                     | v5         | v6         |
+   | .github/workflows/megalinter.yaml              | actions/checkout                     | v5         | v6         |
+   |                                                | actions/upload-artifact              | v4         | v5         |
+   | .github/workflows/quality-checks.yaml          | actions/checkout                     | v5         | v6         |
+   |                                                | DeLaGuardo/setup-clojure             | 13.4       | 13.5.2     |
+   |                                                | clj-kondo/clj-kondo                  | 2025.09.22 | 2026.01.19 |
+   | .github/workflows/scheduled-version-check.yaml | actions/checkout                     | v5         | v6         |
+   | .github/workflows/renovate.yaml                | renovatebot/github-action            | v44.0.5    | v46.0.1    |
+
+
+* 2025-10-16
+** Updated
+   - dev: update github actions to latest versions
+   - aliases: update library versions using `make dependencies-update`
+
+   | :name                                | :current                                 | :latest                                  |
+   |--------------------------------------|------------------------------------------|------------------------------------------|
+   | cider/cider-nrepl                    | 0.57.0                                   | 0.58.0                                   |
+   | clojurians-zulip/feeds               | d7e9deaec0b492998e20dee7735e0ad31d83e246 | 39c07aefe1903685d9d43492cda4ad2eb34cf51c |
+   | com.github.flow-storm/clojure        | 1.12.2                                   | 1.12.3-1                                 |
+   | com.github.flow-storm/flow-storm-dbg | 4.5.3                                    | 4.5.8                                    |
+   | com.github.seancorfield/next.jdbc    | 1.3.1048                                 | 1.3.1070                                 |
+   | com.h2database/h2                    | 2.3.232                                  | 2.4.240                                  |
+   | integrant/repl                       | 0.4.0                                    | 0.5.0                                    |
+   | lambdaisland/kaocha-cljs             | 1.5.154                                  | 1.8.163                                  |
+   | nrepl/nrepl                          | 1.4.0                                    | 1.5.0                                    |
+
+* 2025-09-03
+** Added
+   - aliases: `update/dependency-versions` automatically updates everything to new versions
+   - dev: `dependencies-update` & `dependencies-outdated` make tasks
+
+** Updated
+   - dev: update GitHub actions versions for all workflows
+
+   | :file                                             | :name                                | :current   | :latest    |
+   |---------------------------------------------------|--------------------------------------|------------|------------|
+   | .github/workflows/changelog-check.yaml            | actions/checkout                     | v4         | v5         |
+   | .github/workflows/lint-review.yaml                | actions/checkout                     | v4         | v5         |
+   |                                                   | nnichols/clojure-lint-action         | v4         | v6         |
+   | .github/workflows/megalinter.yaml                 | actions/checkout                     | v4         | v5         |
+   | .github/workflows/quality-checks.yaml             | actions/checkout                     | v4         | v5         |
+   |                                                   | clj-kondo/clj-kondo                  | 2025.06.05 | 2025.07.28 |
+   | .github/workflows/scheduled-version-check.yaml    | actions/checkout                     | v4         | v5         |
+
+
+   - aliases: practicalli project template release 2025-09-04
+   - aliases: update library versions using `make dependencies-update`
+
+   | :name                                | :current   | :latest    |
+   |--------------------------------------|------------|------------|
+   | com.github.flow-storm/clojure        | 1.12.1     | 1.12.2     |
+   | com.github.flow-storm/flow-storm-dbg | 4.4.6      | 4.5.3      |
+   | djblue/portal                        | 0.59.1     | 0.61.0     |
+   | io.github.nextjournal/clerk          | 0.17.1102  | 0.18.1150  |
+   | io.github.seancorfield/deps-new      | v0.9.0     | v0.10.1    |
+   | nrepl/nrepl                          | 1.3.1      | 1.4.0      |
+   | ring/ring-mock                       | 0.6.1      | 0.6.2      |
+
+* 2025-07-01
+** Updated
+   - dev: cljstyle & clj-kondo updates in quality-checks
+   - aliases: update library versions using `make outdated`
+   | :name                                | :current | :latest  |
+   |--------------------------------------|----------|----------|
+   | cider/cider-nrepl                    | 0.56.0   | 0.57.0   |
+   | com.github.flow-storm/flow-storm-dbg | 4.4.4    | 4.4.6    |
+   | com.github.seancorfield/next.jdbc    | 1.3.1002 | 1.3.1048 |
+   | io.github.seancorfield/deps-new      | v0.8.1   | v0.9.0   |
+
+* 2025-06-03
+** Updated
+   - aliases: update library versions using `make outdated`
+   | :name                                | :current                                 | :latest                                  |
+   |--------------------------------------|------------------------------------------|------------------------------------------|
+   | cider/cider-nrepl                    | 0.55.7                                   | 0.56.0                                   |
+   | com.github.flow-storm/clojure        | 1.12.0-9                                 | 1.12.1                                   |
+   | com.github.flow-storm/flow-storm-dbg | 4.4.0                                    | 4.4.4                                    |
+   | djblue/portal                        | 0.59.0                                   | 0.59.1                                   |
+   | org.clojure/spec-alpha2              | 4cbfa677c4cd66339f18e1c122222c05c69e0d8e | eb94e46853d90153ba6dc72a4093719f38a90a4a |
+   | refactor-nrepl/refactor-nrepl        | 3.10.0                                   | 3.11.0                                   |
+   | zprint/zprint                        | 1.2.9                                    | 1.3.0                                    |
+
+* 2025-05-02
+** Added
+- dev: ci scheduled stale issue & pr check (monthly)
+- dev: update clj-kondo 2025.04.07 quality-checks workflow
+
+** Updated
+   - aliases: update library versions using `make outdated`
+   | :name                                | :current | :latest |
+   | ------------------------------------ |--------- | ------- |
+   | cider/cider-nrepl                    | 0.53.2   | 0.55.7  |
+   | com.github.flow-storm/flow-storm-dbg | 4.3.0    | 4.4.0   |
+   | djblue/portal                        | 0.58.5   | 0.59.0  |
+   | io.github.clj-holmes/clj-watson      | v6.0.0   | v6.0.1  |
+   | io.github.seancorfield/deps-new      | v0.8.0   | v0.8.1  |
+   | ring/ring-mock                       | 0.4.0    | 0.6.1   |
+
+* 2025-04-02
 ** Added
    - readme: list aliases with `clojure -X:deps aliases`
+   - aliases: `:src/java21` to include local java sources for java 21
+
+** Updated
+   - readme: simplify introduction, highlight common aliases
+   - dev: setup-clojure 12.3
+   - aliases: update library versions using `make outdated`
+
+   | :name                                | :current                                 | :latest                                  |
+   +--------------------------------------+------------------------------------------+------------------------------------------|
+   | borkdude/carve                       | e02b65f9de679450176a3fa26c89ffd5600d7eb8 | fdd1d0bc432f63db69e3a72167ef5e46f10dfba7 |
+   | cider/cider-nrepl                    | 0.52.1                                   | 0.53.2                                   |
+   | com.github.flow-storm/clojure        | 1.12.0-4                                 | 1.12.0-9                                 |
+   | com.github.flow-storm/flow-storm-dbg | 4.2.0                                    | 4.3.0                                    |
+   | com.github.liquidz/antq              | 2.11.1269                                | 2.11.1276                                |
+   | com.github.seancorfield/next.jdbc    | 1.3.994                                  | 1.3.1002                                 |
+   | io.github.clj-holmes/clj-watson      | v6.0.0                                   | v6.0.1                                   |
+
 
 * 2025-03-01
 ** Updated

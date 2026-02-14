@@ -1,0 +1,33 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [ "config:recommended" ],
+  "packageRules": [
+    {
+      "description": "Clojure dependency updates Pull Request",
+      "matchManagers": ["deps-edn"],
+      "groupName": "Clojure dependencies",
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps",
+      "registryUrls": [
+        "https://repo.clojars.org",
+        "https://repo1.maven.org",
+        "https://raw.githubusercontent.com"
+      ]
+    },
+    {
+      "description": "GitHub Action updates Pull Request",
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions",
+      "semanticCommitType": "ci",
+      "semanticCommitScope": "actions"
+    }
+  ],
+  "clojure": { "enabled": true },
+  "schedule": [ "at any time" ],
+  "timezone": "UTC",
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 0,
+  "automerge": false,
+  "platformAutomerge": false,
+  "rebaseWhen": "behind-base-branch"
+}
